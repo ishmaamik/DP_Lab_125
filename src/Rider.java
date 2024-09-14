@@ -14,8 +14,13 @@ public class Rider {
         this.preferredPaymentMethod= preferredPaymentMethod;
     }
 
-    public void requestRide(){
+    public Rider()
+    {
 
+    }
+
+    public void requestRide(String ride){
+        RideType rt= RideFactory.getRide(ride);
     }
 
     public void rateDriver(){
