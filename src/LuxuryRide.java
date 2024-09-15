@@ -1,6 +1,13 @@
 public class LuxuryRide implements RideType{
-    @Override
-    public void fareCalc() {
+
+    FareCalculator fc;
+
+    public LuxuryRide(FareCalculator fc){
+        this.fc= fc;
+    }
+
+    public LuxuryRide()
+    {
 
     }
     @Override
@@ -10,5 +17,10 @@ public class LuxuryRide implements RideType{
 
     public void matchDriver(){
 
+    }
+
+    @Override
+    public double getFare(double distance) {
+       return fc.fareCalc(distance);
     }
 }

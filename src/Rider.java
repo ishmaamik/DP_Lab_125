@@ -19,8 +19,11 @@ public class Rider {
 
     }
 
-    public void requestRide(String ride){
+    public void requestRide(String ride, String pickup, String dropoff){
         RideType rt= RideFactory.getRide(ride);
+       double s= rt.getFare(10.0);
+        System.out.println("Drive from "+pickup+" to "+dropoff);
+        System.out.println("Fare is "+ s);
     }
 
     public void rateDriver(){

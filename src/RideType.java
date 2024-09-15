@@ -1,9 +1,9 @@
 public interface RideType {
 
-public  void fareCalc();
+  double getFare(double distance);
 
-public  void capacityCalc();
+  void capacityCalc();
 
-public void matchDriver();
+ void matchDriver();
 
 }

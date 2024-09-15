@@ -1,8 +1,15 @@
 public class BikeRide implements RideType{
-    @Override
-    public void fareCalc() {
+
+    FareCalculator fc;
+
+    public BikeRide(FareCalculator fc){
+        this.fc= fc;
+    }
+
+    public BikeRide(){
 
     }
+
     @Override
     public void capacityCalc() {
 
@@ -10,5 +17,10 @@ public class BikeRide implements RideType{
 
     public void matchDriver(){
 
+    }
+
+    @Override
+    public double getFare(double distance) {
+        return fc.fareCalc(distance);
     }
 }

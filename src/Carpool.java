@@ -1,8 +1,13 @@
 public class Carpool implements RideType{
-    int fare;
-    @Override
-    public void fareCalc() {
-        
+
+    FareCalculator fc;
+
+    public Carpool(FareCalculator fc){
+        this.fc= fc;
+    }
+
+    public Carpool(){
+
     }
     @Override
     public void capacityCalc() {
@@ -11,5 +16,10 @@ public class Carpool implements RideType{
 
     public void matchDriver(){
 
+    }
+
+    @Override
+    public double getFare(double distance) {
+        return fc.fareCalc(distance);
     }
 }
