@@ -15,6 +15,7 @@ public class Main {
         trip.addObserver(in);
 
         trip.confirmRide();
+        r.choosePayMethod("Credit Card");
 
 
 

@@ -13,6 +13,7 @@ public class Rider {
     String location;
     Integer rating;
     String preferredPaymentMethod;
+    double pay;
 
     public Rider(String id, String name, String location, Integer rating, String preferredPaymentMethod){
         this.id= id;
@@ -33,12 +34,12 @@ public class Rider {
 
         RideType rt= RideFactory.getRide(ride);
 
-        double s= rt.getFare(10.0);
+        pay= rt.getFare(10.0);
 
         System.out.println("Drive from "+pickup+" to "+dropoff);
-        System.out.println("Fare is "+ s);
+        System.out.println("Fare is "+ pay);
 
-        trip.setFare(s);
+        trip.setFare(pay);
         return trip;
     }
 
@@ -47,7 +48,8 @@ public class Rider {
     }
 
     public void choosePayMethod(String payType){
-        PaymentStrat ps= new PaymentFactory().getPay(payType);
+        System.out.println("Method chosen: " + payType);
+        PaymentStrat ps= new PaymentFactory().getPay(payType, pay);
     }
 
 

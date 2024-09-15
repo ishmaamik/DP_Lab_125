@@ -7,15 +7,21 @@ import Payment.PaymentStrat;
 
 public class PaymentFactory {
 
-    public PaymentStrat getPay(String paymentType){
+    public PaymentStrat getPay(String paymentType, double amount){
         if (paymentType.equalsIgnoreCase("PayPal")){
-            return new PayPal();
+            PaymentStrat p= new PayPal();
+            p.processPay(amount);
+            return p;
         }
         else if(paymentType.equalsIgnoreCase("Credit Card")){
-            return new CreditCard();
+            PaymentStrat p= new CreditCard();
+            p.processPay(amount);
+            return p;
         }
         else if(paymentType.equalsIgnoreCase("Digital Wallet")){
-            return new DigitalWallet();
+            PaymentStrat p= new DigitalWallet();
+            p.processPay(amount);
+            return p;
         }
         else {
             throw new IllegalArgumentException("Invalid type");
