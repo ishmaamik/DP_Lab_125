@@ -1,0 +1,16 @@
+For different ride types, Factory pattern is used so that the riders can choose their
+preferred ride type. To maintain OCP, i.e. the ride class itself need not modified,
+Ride objects are factory created.
+
+For different payment methods to be chosen by the riders, Factory Pattern is used.
+Similarly to maintain OCP.
+
+For the different payment implementations and fare calculations ridetype-wise,
+Strategy Pattern is used. So the classes themselves do not contain the implementations.
+Say I want a discounted Luxury Ride fare, I can do the implementations in the
+LuxuryFare class rather than the Luxury Ride class itself.
+
+For the Notification systems, Observer Pattern is used so that no matter what
+Notification medium used, if the subject or in this case the Rider or driver or trip
+plans change, the observers (driver's mail or sms, rider's mail or sms) will
+be automatically informed.
