@@ -1,5 +1,5 @@
 package Users;
-import TripUtils.Trip;
+import Trip.Trip;
 
 import Factory.RideFactory;
 import RideType.RideType;
@@ -25,11 +25,19 @@ public class Rider {
 
     }
 
-    public void requestRide(String ride, String pickup, String dropoff){
+    public Trip requestRide(String ride, String pickup, String dropoff){
+
+        Trip trip= new Trip(this, pickup, dropoff);
+
         RideType rt= RideFactory.getRide(ride);
-       double s= rt.getFare(10.0);
+
+        double s= rt.getFare(10.0);
+
         System.out.println("Drive from "+pickup+" to "+dropoff);
         System.out.println("Fare is "+ s);
+
+        trip.setFare(s);
+        return trip;
     }
 
     public void rateDriver(){
@@ -40,9 +48,5 @@ public class Rider {
 
     }
 
-    public void bookTrip()
-    {
-        Trip trip= new Trip(location);
-    }
 
 }
