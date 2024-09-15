@@ -1,4 +1,6 @@
 package Users;
+import Factory.PaymentFactory;
+import Payment.PaymentStrat;
 import Trip.Trip;
 
 import Factory.RideFactory;
@@ -44,8 +46,8 @@ public class Rider {
 
     }
 
-    public void makePayment(){
-
+    public void choosePayMethod(String payType){
+        PaymentStrat ps= new PaymentFactory().getPay(payType);
     }
 
 
