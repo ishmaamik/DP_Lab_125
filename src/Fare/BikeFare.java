@@ -1,9 +1,11 @@
-public class LuxuryFare implements FareCalculator{
+package Fare;
+
+public class BikeFare implements FareCalculator{
 
     @Override
     public double fareCalc(double distance) {
         double s;
-        s= distance * 3.0;
+        s= distance * 0.5;
 //        System.out.println("fare is "+s);
         return s;
     }

@@ -1,3 +1,9 @@
+package Users;
+import TripUtils.Trip;
+
+import Factory.RideFactory;
+import RideType.RideType;
+
 public class Rider {
 
     String id;

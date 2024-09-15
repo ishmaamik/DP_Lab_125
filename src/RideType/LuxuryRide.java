@@ -1,3 +1,6 @@
+package RideType;
+import Fare.FareCalculator;
+
 public class LuxuryRide implements RideType{
 
     FareCalculator fc;

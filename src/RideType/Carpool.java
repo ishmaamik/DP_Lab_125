@@ -1,3 +1,8 @@
+package RideType;
+import Fare.FareCalculator;
+
+
+
 public class Carpool implements RideType{
 
     FareCalculator fc;

@@ -1,3 +1,8 @@
+package Users;
+
+import RideType.Carpool;
+import RideType.RideType;
+
 public class Driver {
     String id;
     String name;

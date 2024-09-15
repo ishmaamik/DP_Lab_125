@@ -1,3 +1,7 @@
+package TripUtils;
+
+import RideType.RideType;
+
 public class Trip {
     String id;
     String pickupLocation;

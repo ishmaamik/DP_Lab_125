@@ -1,8 +1,17 @@
+package Factory;
+import Fare.BikeFare;
+import Fare.CarpoolFare;
+import Fare.LuxuryFare;
+import RideType.Carpool;
+import RideType.LuxuryRide;
+import RideType.BikeRide;
+import RideType.RideType;
+
 public class RideFactory {
 
     public static RideType getRide(String ride)
     {
-        if (ride.equalsIgnoreCase("Carpool")) {
+        if (ride.equalsIgnoreCase("RideType.Carpool")) {
             System.out.println("Car ride on!");
             return new Carpool(new CarpoolFare());
         }

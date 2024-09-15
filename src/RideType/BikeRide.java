@@ -1,3 +1,6 @@
+package RideType;
+import Fare.FareCalculator;
+
 public class BikeRide implements RideType{
 
     FareCalculator fc;
