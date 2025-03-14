@@ -45,4 +45,14 @@ public class TextEditor {
         }
     }
 
+    public EditorMemento createMemento(){
+        return new EditorMemento(content, cursorPosition, selection);
+    }
+
+    public void restoreFromMemento(EditorMemento EM){
+        this.content= EM.getContent();
+        this.selection= EM.getSelection();
+        this.cursorPosition= EM.getCursorPosition();
+    }
+
 }
